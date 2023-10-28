@@ -1,10 +1,8 @@
 import os
 import time
-
 import cloudscraper
 import requests
 from discord_webhook import DiscordEmbed, DiscordWebhook
-
 from webserver import keep_alive
 
 webhook_enable = True
