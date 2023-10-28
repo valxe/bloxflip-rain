@@ -1,10 +1,11 @@
 import os
-import json
 import time
-import requests
+
 import cloudscraper
+import requests
+from discord_webhook import DiscordEmbed, DiscordWebhook
+
 from webserver import keep_alive
-from discord_webhook import DiscordWebhook, DiscordEmbed
 
 webhook_enable = True
 webhookurl = os.environ.get('webhookurl')
@@ -53,7 +54,7 @@ def main():
                     eduration = umduration / 1000
                     duration = round(eduration)
                     convert = (getduration / (1000 * 60)) % 60
-                    waiting = (convert * 60 + 10)
+                    (convert * 60 + 10)
                     sent = time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(int(time.time())))
 
                     if time.time() > rain_end:
@@ -85,7 +86,7 @@ def main():
                             print("Webhook executed!")
                             webhook.remove_embed(0)
                             print("All Done!")
-                            rain_end = time.time() + duration * 60
+                            time.time() + duration * 60
 
                         time.sleep(duration * 60 + 10)
 
